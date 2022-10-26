@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Contact Me</title>
@@ -5,15 +6,22 @@
 <script>
     function redBoxes()
     {
-        var fName = document.getElementById("fName").value;
-        var lName = document.getElementById("lName").value;
-        var email = document.getElementById("email").value;
-
-        window.alert("My name is " + fName  + lName + " and my email is " + email);
-        document.getElementById("finalResult").innerHTML = "My name is " + fName + lName + " and my email is " + email;
-        
-        elem.setAttribute("style", "border:2px solid red");
+        var firstName = document.getElementById("fName").value;
+        var lastName = document.getElementById("lName").value;
+        var emailAddress = document.getElementById("email").value;
+        if (firstName== "")
+    {
+        window.alert("hey, it's empty!");
+        //document.getElementById().
     }
+        else
+    {
+        window.alert("My name is " + firstName  + lastName + " and my email is " + emailAddress);
+        document.getElementById("message").innerHTML = "My name is " + firstName + lastName + " and my email is " + emailAddress;
+        
+        //elem.setAttribute("style", "border:2px solid red");
+    }
+    
 </script>
     </head>
     <body style="background-color:lightpink; text-align:center;background-image: url(./images/milkshake.jpg);
@@ -33,16 +41,21 @@
         <input type="radio" name="yes" value="yes">yes<br>
         <input type="radio" name="no" value="no">no<br>
        </br>
-        <button id="mysubmit" type="SUBMIT">Submit</button>
+       <div id="message"></div>
+    <br/>
+    <br/>
+        <button id="mysubmit" type="SUBMIT" onclick="redBoxes();">Submit</button>
        </form>
        <br/>
        *All Inputs Required*
        <br/>
-       <div id="finalResult"></div>
        <br/>
        <ul style="text-align:left;">
             <li><a href="JazmineRaymond.html">Homepage</a></li>
            <li><a href="astory_JazmineRaymond.html">A Story</a></li>
        </ul>
     </body>
+    <script>
+        console.log("I am in the console!");
+    </script>
 </html>
