@@ -6,14 +6,13 @@
 <script>
     function redBoxes()
     {
+        //window.alert("♥️ please agree to our terms ♥️");
+
         var firstName = document.getElementById("fName").value;
+        //window.alert(firstName); note: window alert check works for names and email, not boxes
         var lastName = document.getElementById("lName").value;
         var emailAddress = document.getElementById("email").value;
-        var yesButton = document.getElementById("yes").value;
-        var checkBox = document.getElementById("yes").value;
-        var noBox = document.getElementById("no").value;
-        
-        if (firstName== "", lastName=="", emailAddress=="")
+    if (firstName== "", lastName=="", emailAddress=="")
     {
         document.getElementById("fName").style.backgroundColor = "red";
         document.getElementById("lName").style.backgroundColor = "red";
@@ -22,23 +21,23 @@
         document.getElementById("lName").focus();
         document.getElementById("email").focus();
     }
-
-        else if (checkBox.checked == false)
+        var checkBox = document.getElementById("yes").value;
+    if (checkBox.checked == false)
     {
         window.alert("♥️ please agree to our terms ♥️");
-        document.getElementById("yes").focus();
+        //document.getElementById("yes").focus();
     }
-    
-    else if (noBox.checked ==true)
+        var noBox = document.getElementById("no").value;
+    if (noBox.checked ==true)
     {
         window.alert("♥️ please agree to our terms ♥️");
-        document.getElementById("yes").focus();  
+        //document.getElementById("yes").focus();  
     }
 
-        else
+    else
     {
-        window.alert("My name is " + firstName  + lastName + " and my email is " + emailAddress);
-        document.getElementById("message").innerHTML = "My name is " + firstName + lastName + " and my email is " + emailAddress;
+        window.alert("My name is " + firstName +' '+ lastName + " and my email is " + emailAddress);
+        document.getElementById("message").innerHTML = "My name is " + firstName + ' ' + lastName + " and my email is " + emailAddress;
         document.getElementById("fName").value = "";
         document.getElementById("lName").value = "";
         document.getElementById("email").value = "";
@@ -60,12 +59,12 @@
         <br/>
         <br/>
         <h3>I accept the terms of agreement</h3>
-        <input type="radio" name="yes" value="yes">yes<br>
-        <input type="radio" name="no" value="no">no<br>
+        <input type="radio" id="yes" value="yes">yes<br>
+        <input type="radio" id="no" value="no">no<br>
        </br>
        <div id="message"></div>
         <br/>
-        <button id="mysubmit" type="button" onclick="redBoxes();">Submit</button>
+        <button id="mysubmit" type="button" onclick='redBoxes();'>Submit</button>
        </form>
        <br/>
        *All Inputs Required*
