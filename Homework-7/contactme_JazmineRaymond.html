@@ -9,11 +9,9 @@
         var firstName = document.getElementById("fName").value;
         var lastName = document.getElementById("lName").value;
         var emailAddress = document.getElementById("email").value;
+        var yesButton = document.getElementById("yes").value;
         var checkBox = document.getElementById("yes").value;
-        if (checkBox = "")
-        {
-        window.alert("♥️ please agree to our terms ♥️");    
-        }
+        var noBox = document.getElementById("no").value;
         
         if (firstName== "", lastName=="", emailAddress=="")
     {
@@ -23,9 +21,20 @@
         document.getElementById("fName").focus();
         document.getElementById("lName").focus();
         document.getElementById("email").focus();
-        document.getElementById("yes").focus();
-     
     }
+
+        else if (checkBox.checked == false)
+    {
+        window.alert("♥️ please agree to our terms ♥️");
+        document.getElementById("yes").focus();
+    }
+    
+    else if (noBox.checked ==true)
+    {
+        window.alert("♥️ please agree to our terms ♥️");
+        document.getElementById("yes").focus();  
+    }
+
         else
     {
         window.alert("My name is " + firstName  + lastName + " and my email is " + emailAddress);
@@ -51,7 +60,7 @@
         <br/>
         <br/>
         <h3>I accept the terms of agreement</h3>
-        <input type="radio" name="yes" value="yes"radioObject.required = true>yes<br>
+        <input type="radio" name="yes" value="yes">yes<br>
         <input type="radio" name="no" value="no">no<br>
        </br>
        <div id="message"></div>
