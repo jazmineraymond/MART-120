@@ -6,10 +6,7 @@
 <script>
     function redBoxes()
     {
-        //window.alert("♥️ please agree to our terms ♥️");
-
         var firstName = document.getElementById("fName").value;
-        //window.alert(firstName); note: window alert check works for names and email, not boxes
         var lastName = document.getElementById("lName").value;
         var emailAddress = document.getElementById("email").value;
     if (firstName== "", lastName=="", emailAddress=="")
@@ -21,18 +18,6 @@
         document.getElementById("lName").focus();
         document.getElementById("email").focus();
     }
-        var checkBox = document.getElementById("yes").value;
-    if (checkBox.checked == false)
-    {
-        window.alert("♥️ please agree to our terms ♥️");
-        //document.getElementById("yes").focus();
-    }
-        var noBox = document.getElementById("no").value;
-    if (noBox.checked ==true)
-    {
-        window.alert("♥️ please agree to our terms ♥️");
-        //document.getElementById("yes").focus();  
-    }
 
     else
     {
@@ -41,7 +26,17 @@
         document.getElementById("fName").value = "";
         document.getElementById("lName").value = "";
         document.getElementById("email").value = "";
+        document.getElementById("fName").style.backgroundColor = "white";
+        document.getElementById("lName").style.backgroundColor = "white";
+        document.getElementById("email").style.backgroundColor = "white";
     }
+    }
+    function Yesbox() 
+    {
+        document.getElementById("yes").required = true;
+        window.alert("♥️ please agree to our terms ♥️");
+        document.getElementById("yes").focus();
+
     }
 </script>
     </head>
