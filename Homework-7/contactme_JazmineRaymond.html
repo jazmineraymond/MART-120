@@ -9,13 +9,19 @@
         var firstName = document.getElementById("fName").value;
         var lastName = document.getElementById("lName").value;
         var emailAddress = document.getElementById("email").value;
-    if (firstName== "", lastName=="", emailAddress=="")
+    if (firstName== "")
     {
         document.getElementById("fName").style.backgroundColor = "red";
-        document.getElementById("lName").style.backgroundColor = "red";
-        document.getElementById("email").style.backgroundColor = "red";
         document.getElementById("fName").focus();
+    }
+    else if (lastName=="")
+    {
+        document.getElementById("lName").style.backgroundColor = "red"; 
         document.getElementById("lName").focus();
+    }
+    else if (emailAddress=="")
+    {
+        document.getElementById("email").style.backgroundColor = "red";
         document.getElementById("email").focus();
     }
 
@@ -38,14 +44,12 @@
         
    if (document.getElementById("yes").checked == false)
     {
-        window.alert("♥️ please agree to our terms ♥️");
-        document.getElementById("yes").focus();
+        alert("♥️ please agree to our terms ♥️");
     }
         
     if (document.getElementById("no").checked ==true)
     {
-        window.alert("♥️ please agree to our terms ♥️");
-        document.getElementById("yes").focus();
+        alert("♥️ please agree to our terms ♥️");
     }
     }
 </script>
@@ -69,7 +73,7 @@
        </br>
        <div id="message"></div>
         <br/>
-        <button id="mysubmit" type="button" onclick='redBoxes(); yesBox();'>Submit</button>
+        <button id="mysubmit" type="button" onclick='yesBox(); redBoxes();'>Submit</button>
        </form>
        <br/>
        *All Inputs Required*
