@@ -31,8 +31,21 @@
         document.getElementById("email").style.backgroundColor = "white";
     }
     }
-    function Yesbox() 
+    function yesBox() 
     {
+        //var checkBox = document.getElementById("yes").value;
+   // if (checkBox.checked == false)
+    //{
+        //window.alert("♥️ please agree to our terms ♥️");
+        //document.getElementById("yes").focus();
+    //}
+        //var noBox = document.getElementById("no").value;
+    //if (noBox.checked ==true)
+    //{
+        //window.alert("♥️ please agree to our terms ♥️");
+        //document.getElementById("yes").focus();  
+    //}
+
         document.getElementById("yes").required = true;
         window.alert("♥️ please agree to our terms ♥️");
         document.getElementById("yes").focus();
@@ -54,12 +67,12 @@
         <br/>
         <br/>
         <h3>I accept the terms of agreement</h3>
-        <input type="radio" id="yes" value="yes">yes<br>
-        <input type="radio" id="no" value="no">no<br>
+        <input type="radio" name="terms" id="yes" value="yes">yes<br>
+        <input type="radio" name="terms" id="no" value="no">no<br>
        </br>
        <div id="message"></div>
         <br/>
-        <button id="mysubmit" type="button" onclick='redBoxes();'>Submit</button>
+        <button id="mysubmit" type="button" onclick='redBoxes()' onclick='yesBox()'>Submit</button>
        </form>
        <br/>
        *All Inputs Required*
