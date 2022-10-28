@@ -21,7 +21,7 @@
 
     else
     {
-        window.alert("My name is " + firstName +' '+ lastName + " and my email is " + emailAddress);
+        window.alert("You have sent:  My name is " + firstName +' '+ lastName + " and my email is " + emailAddress);
         document.getElementById("message").innerHTML = "My name is " + firstName + ' ' + lastName + " and my email is " + emailAddress;
         document.getElementById("fName").value = "";
         document.getElementById("lName").value = "";
@@ -33,23 +33,20 @@
     }
     function yesBox() 
     {
-        //var checkBox = document.getElementById("yes").value;
-   // if (checkBox.checked == false)
-    //{
-        //window.alert("♥️ please agree to our terms ♥️");
-        //document.getElementById("yes").focus();
-    //}
-        //var noBox = document.getElementById("no").value;
-    //if (noBox.checked ==true)
-    //{
-        //window.alert("♥️ please agree to our terms ♥️");
-        //document.getElementById("yes").focus();  
-    //}
-
-        document.getElementById("yes").required = true;
+        var checkBox = document.getElementById("yes").value;
+        var noBox = document.getElementById("no").value;
+        
+   if (document.getElementById("yes").checked == false)
+    {
         window.alert("♥️ please agree to our terms ♥️");
         document.getElementById("yes").focus();
-
+    }
+        
+    if (document.getElementById("no").checked ==true)
+    {
+        window.alert("♥️ please agree to our terms ♥️");
+        document.getElementById("yes").focus();
+    }
     }
 </script>
     </head>
